@@ -76,7 +76,7 @@ vendor/lib/libsystem_health_mon.so
 -app/btmultisim/btmultisim.apk:app/btmultisim.apk
 -framework/btmultisimlibrary.jar
 etc/permissions/btmultisim.xml
-
+-priv-app/DualSimStatus/DualSimStatus.apk:priv-app/DualSimStatus.apk
 
 # Sensors
 bin/sensors.qcom
