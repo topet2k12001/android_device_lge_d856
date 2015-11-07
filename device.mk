@@ -39,7 +39,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
 
-# Wifi
+# WiFi
 PRODUCT_PACKAGES += \
     hostapd_default.conf \
     libwcnss_qmi \
@@ -50,12 +50,13 @@ PRODUCT_PACKAGES += \
     NfcNci \
     nfc_nci.pn54x.default
 
+# WiFi BCMDHD
+$(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
+
 PRODUCT_COPY_FILES += \
-    device/lge/g3-common/wcnss/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    device/lge/g3-common/wcnss/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/lge/g3-common/wcnss/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
-    device/lge/g3-common/wcnss/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
-    device/lge/g3-common/wcnss/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
+    hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/fw_bcmdhd.bin:system/etc/firmware/fw_bcmdhd.bin \
+    hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/fw_bcmdhd_apsta.bin:system/etc/firmware/fw_bcmdhd_apsta.bin \
+		hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/fw_bcmdhd_mfg.bin:system/etc/firmware/fw_bcmdhd_mfg.bin
 
 # common g3
 $(call inherit-product, device/lge/g3-common/g3.mk)
