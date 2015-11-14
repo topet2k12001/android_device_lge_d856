@@ -1,9 +1,13 @@
 # Radio
-persist.radio.do_not_init_csvt=1
+persist.radio.multisim.config=dsda
 rild.libargs=-d /dev/smd0
 rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 ril.subscription.types=NV,RUIM
+DEVICE_PROVISIONED=1
 ro.telephony.call_ring.multiple=0
 ro.telephony.default_network=9
 telephony.lteOnCdmaDevice=0
 telephony.lteOnGsmDevice=1
+persist.sys.mlt_swupdt=1
+ro.multisim.simslotcount=2
+ro.multisim.set_audio_params=true
