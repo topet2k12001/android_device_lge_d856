@@ -21,8 +21,7 @@ $(call inherit-product-if-exists, vendor/lge/d856/d856-vendor.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/lge/d856/configs/mixer_paths.xml:system/etc/mixer_paths.xml \
-		device/lge/d856/configs/mixer_paths_auxpcm.xml:system/etc/mixer_paths_auxpcm.xml \
+    device/lge/g3-common/configs/mixer_paths_bcm.xml:system/etc/mixer_paths.xml 
 
 # NFC
 PRODUCT_COPY_FILES += \
