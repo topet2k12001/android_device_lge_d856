@@ -17,12 +17,12 @@
 # inherit from common g3
 -include device/lge/g3-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := g3,d856,d857,d858,d859
+TARGET_OTA_ASSERT_DEVICE := g3,d856,d857,d858,d858hk,d859
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/lge/d856/configs/vnd_g3.conf
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d856/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/lge/d858hk/configs/vnd_g3.conf
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d858hk/bluetooth
 
 # Audio
 AUDIO_FEATURE_ENABLED_FM := true
@@ -37,7 +37,7 @@ TARGET_GLOBAL_CPPFLAGS += -DANDROID_MULTI_SIM
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_d856_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_d858hk_defconfig
 TARGET_REQUIRES_BUMP := true
 
 # Partitions
@@ -49,7 +49,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 889192448
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/lge/d856/rootdir/etc/fstab.g3
+TARGET_RECOVERY_FSTAB := device/lge/d858hk/rootdir/etc/fstab.g3
 
 # NFC
 BOARD_NFC_CHIPSET := pn547
@@ -70,4 +70,4 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # inherit from the proprietary version
--include vendor/lge/d856/BoardConfigVendor.mk
+-include vendor/lge/d858hk/BoardConfigVendor.mk
